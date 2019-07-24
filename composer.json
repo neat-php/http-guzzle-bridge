@@ -27,7 +27,7 @@
         }
     },
     "require": {
-        "neat/http": "dev-feature/psr-util",
+        "neat/http": "^0.2",
         "guzzlehttp/psr7": "^1.4"
     },
     "require-dev": {

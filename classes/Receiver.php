@@ -3,10 +3,11 @@
 namespace Neat\Http\Guzzle;
 
 use GuzzleHttp\Psr7\ServerRequest;
+use Neat\Http\ReceiverInterface;
 use Neat\Http\Request;
 use Neat\Http\StatusException;
 
-class Receiver
+class Receiver implements ReceiverInterface
 {
     /**
      * @var Request
@@ -28,7 +29,7 @@ class Receiver
     /**
      * @return Request
      */
-    public function getRequest(): Request
+    public function request(): Request
     {
         return $this->request;
     }

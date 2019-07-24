@@ -6,8 +6,9 @@ use GuzzleHttp\Psr7\Stream;
 use Neat\Http\Response;
 use Neat\Http\Response\Redirect;
 use function GuzzleHttp\Psr7\stream_for;
+use Neat\Http\TransmitterInterface;
 
-class Transmitter
+class Transmitter implements TransmitterInterface
 {
     /**
      * @param string $html
