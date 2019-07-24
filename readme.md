@@ -1,7 +1,7 @@
 Neat HTTP components
 =======================
-[![Stable Version](https://poser.pugx.org/neat/http-guzzle-bridge/version)](https://packagist.org/packages/neat/http)
-[![Build Status](https://travis-ci.org/neat-php/http-guzzle-bridge.svg?branch=master)](https://travis-ci.org/neat-php/http)
+[![Stable Version](https://poser.pugx.org/neat/http-guzzle-bridge/version)](https://packagist.org/packages/neat/http-guzzle-bridge)
+[![Build Status](https://travis-ci.org/neat-php/http-guzzle-bridge.svg?branch=master)](https://travis-ci.org/neat-php/http-guzzle-bridge)
 
 
 
