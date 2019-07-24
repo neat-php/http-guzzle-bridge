@@ -1,0 +1,36 @@
+{
+    "name": "neat/http-guzzle-bridge",
+    "description": "",
+    "type": "library",
+    "keywords": [
+        "http",
+        "request",
+        "response",
+        "psr7",
+        "guzzle"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bauke van der Woude",
+            "email": "bvanderwoude@shopbox.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Neat\\Http\\Guzzle\\": "classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Neat\\Http\\Guzzle\\Test\\": "tests/"
+        }
+    },
+    "require": {
+        "neat/http": "dev-feature/psr-util",
+        "guzzlehttp/psr7": "^1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    }
+}
