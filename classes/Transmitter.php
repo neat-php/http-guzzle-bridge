@@ -5,8 +5,8 @@ namespace Neat\Http\Guzzle;
 use GuzzleHttp\Psr7\Stream;
 use Neat\Http\Response;
 use Neat\Http\Response\Redirect;
-use function GuzzleHttp\Psr7\stream_for;
 use Neat\Http\TransmitterInterface;
+use function GuzzleHttp\Psr7\stream_for;
 
 class Transmitter implements TransmitterInterface
 {
@@ -75,6 +75,16 @@ class Transmitter implements TransmitterInterface
         }
 
         $body = $response->psr()->getBody();
+        if ($body->isSeekable()) {
+            $body->rewind();
+        }
+
+        if (!$body->isReadable()) {
+            echo $body;
+
+            return;
+        }
+
         while (!$body->eof()) {
             echo $body->read(1024);
         }
