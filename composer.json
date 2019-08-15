@@ -27,6 +27,8 @@
         }
     },
     "require": {
+        "php": ">=7.0",
+        "ext-json": "*",
         "neat/http": "^0.2",
         "guzzlehttp/psr7": "^1.4"
     },
