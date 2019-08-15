@@ -2,6 +2,7 @@
 
 namespace Neat\Http\Guzzle;
 
+use Exception;
 use GuzzleHttp\Psr7\ServerRequest;
 use Neat\Http\ReceiverInterface;
 use Neat\Http\Request;
@@ -47,7 +48,7 @@ class Receiver implements ReceiverInterface
         }
         $decoded = json_decode($body);
         if (json_last_error()) {
-            throw new StatusException(400, null, new \Exception(json_last_error_msg(), json_last_error()));
+            throw new StatusException(400, null, new Exception(json_last_error_msg(), json_last_error()));
         }
 
         $this->request = new Request($this->request->psr()->withParsedBody($decoded));

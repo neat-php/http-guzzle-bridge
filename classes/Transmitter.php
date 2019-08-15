@@ -2,10 +2,13 @@
 
 namespace Neat\Http\Guzzle;
 
+use GuzzleHttp\Psr7\Response as GuzzleResponse;
 use GuzzleHttp\Psr7\Stream;
 use Neat\Http\Response;
 use Neat\Http\Response\Redirect;
 use Neat\Http\TransmitterInterface;
+use TypeError;
+
 use function GuzzleHttp\Psr7\stream_for;
 
 class Transmitter implements TransmitterInterface
@@ -48,7 +51,7 @@ class Transmitter implements TransmitterInterface
         if (!is_resource($resource)) {
             $method = __METHOD__;
             $type   = gettype($resource);
-            throw new \TypeError("Argument 1 passed to $method must be of the type resource, $type given");
+            throw new TypeError("Argument 1 passed to $method must be of the type resource, $type given");
         }
 
         $download = new Response\Download(new Stream($resource), $name, $mimeType, $attachment);
@@ -61,7 +64,7 @@ class Transmitter implements TransmitterInterface
      */
     public function response(): Response
     {
-        return new Response(new \GuzzleHttp\Psr7\Response);
+        return new Response(new GuzzleResponse);
     }
 
     /**
