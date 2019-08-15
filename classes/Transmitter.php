@@ -6,7 +6,7 @@ use GuzzleHttp\Psr7\Response as GuzzleResponse;
 use GuzzleHttp\Psr7\Stream;
 use Neat\Http\Response;
 use Neat\Http\Response\Redirect;
-use Neat\Http\TransmitterInterface;
+use Neat\Http\Transmitter as TransmitterInterface;
 use TypeError;
 
 use function GuzzleHttp\Psr7\stream_for;

@@ -4,7 +4,7 @@ namespace Neat\Http\Guzzle;
 
 use Exception;
 use GuzzleHttp\Psr7\ServerRequest;
-use Neat\Http\ReceiverInterface;
+use Neat\Http\Receiver as ReceiverInterface;
 use Neat\Http\Request;
 use Neat\Http\StatusException;
 
