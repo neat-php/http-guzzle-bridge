@@ -29,7 +29,7 @@
     "require": {
         "php": ">=7.0",
         "ext-json": "*",
-        "neat/http": "^0.3",
+        "neat/http": "^0.4",
         "guzzlehttp/psr7": "^1.4"
     },
     "require-dev": {
