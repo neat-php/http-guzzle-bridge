@@ -6,7 +6,7 @@ use Exception;
 use GuzzleHttp\Psr7\ServerRequest;
 use Neat\Http\Receiver as ReceiverInterface;
 use Neat\Http\Request;
-use Neat\Http\StatusException;
+use Neat\Http\Exception\StatusException;
 
 class Receiver implements ReceiverInterface
 {
