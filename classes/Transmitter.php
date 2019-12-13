@@ -11,6 +11,9 @@ use TypeError;
 
 use function GuzzleHttp\Psr7\stream_for;
 
+/**
+ * @deprecated Use Neat\Http\Server\Output or Neat\Http\Server\Server instead
+ */
 class Transmitter implements TransmitterInterface
 {
     /**

@@ -8,6 +8,9 @@ use Neat\Http\Receiver as ReceiverInterface;
 use Neat\Http\Request;
 use Neat\Http\Exception\StatusException;
 
+/**
+ * @deprecated Use Neat\Http\Server\Server instead
+ */
 class Receiver implements ReceiverInterface
 {
     /**
